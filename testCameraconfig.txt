@@ -18,12 +18,12 @@ x1p,y1p,x2p,y2p = 200,10,500,20                                     # rectangle 
 # image rotation parameters
 angle = 2
 
-roiwindow = (215,23,223,420)
-roiwindow = (215,23,223,420)
+roiwindow = (299,26,212,436)
+roiwindow = (299,26,212,436)
 lmts = [5,5,5,5]                                                # for visualization, if fullimage True, limits are used to expand the ROI area, crop it and replace it in the raw image and display
 perspectTrasf = 4
-pntsForPrspctveTrnsfrm = [[218,41],[395,32],[237,473],[429,469]]
-pntsForPrspctveTrnsfrm = [[218,41],[395,32],[237,473],[429,469]]
+pntsForPrspctveTrnsfrm = [[296,33],[478,23],[322,471],[509,462]]
+pntsForPrspctveTrnsfrm = [[296,33],[478,23],[322,471],[509,462]]
 
 #count
 cntinglnepos = (int(10*rawimagescale)
@@ -54,7 +54,7 @@ if detection_method == 'ImageProc':
     dilateIteration = 3
     dilateIterationnoise = 3
     naancounter = shnutils1.shnObjectCounterv2('continuous',cntinglnepos,cntinglineslope,deviation)
-    boxesarealimit = 7
+    boxesarealimit = 6
 elif detection_method == 'FCN':
     filtercolorlower = [(1, 2, 170)]
     filtercolorupper = [(87, 255, 255)]
@@ -63,8 +63,8 @@ elif detection_method == 'FCN':
     fcndetector = FCNDetectorV3.shnFCNDetectorV3(modelsDir,FCNmodels,inpimgshape,windowsshapes)
     time.sleep(1)
     naancounter = shnutils1.shnObjectCounterv2('continuous',cntinglnepos,cntinglineslope,deviation)
-    boxesarealimit = 7
-    FCNconfthresh = 8
-    FCNnmsthreshold = 9
+    boxesarealimit = 6
+    FCNconfthresh = 7
+    FCNnmsthreshold = 8
     
 recordingflagSS = shnutils1.shnSingleShot()                         # single shot used to take ONE snapshot of the image once the pan reaches a specific postion
