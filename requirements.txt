@@ -1,7 +1,7 @@
 
 app==0.0.1
 argh==0.26.2
-certifi==2020.6.20
+
 click==7.1.2
 cycler==0.10.0
 DateTime==4.3
@@ -11,7 +11,7 @@ Flask-Images==3.0.2
 Flask-Resize==2.0.4
 Flask-SQLAlchemy==2.4.4
 imageio==2.9.0
-importlib==1.0.4
+
 itsdangerous==1.1.0
 Jinja2==2.11.2
 kiwisolver==1.2.0
