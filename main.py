@@ -27,7 +27,7 @@ def index():
 
 
 
-@app.route('/shnGetCamImg', methods = ['GET', 'POST'])
+@app.route('/shnGetCamImg', methods = ['POST'])
 def shnGetCamImg():
 	
 
@@ -52,7 +52,6 @@ def shnGetCamImg():
 		#this is for the cropped image
 		start_X = int(request.form['startX_Coord'])
 		start_Y = int(request.form['startY_Coord'])
-		
 		width_XY = int(request.form['width_Coord'])
 		height_XY = int(request.form['height_Coord'])
 
@@ -69,9 +68,7 @@ def shnGetCamImg():
 
 
 	test = setValue(editKeyVal)
-	
 	imgtest, imgCrop, transformed_image, final_image = imageProcessing(cameraip, start_X, start_Y, width_XY, height_XY, pnt1, pnt2, pnt3, pnt4)
-
 	imgtest, imgCrop, transformed_image, final_image = updateFolder(cameraip, imgtest, imgCrop, transformed_image, final_image)
 
 	if pic_type == "Original Image":
